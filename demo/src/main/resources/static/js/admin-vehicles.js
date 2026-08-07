@@ -35,3 +35,4 @@ async function loadVehicles() {
 }
 
 loadVehicles();
+setInterval(loadVehicles, 5000);

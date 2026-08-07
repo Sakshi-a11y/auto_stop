@@ -4,16 +4,17 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Admin — Login</title>
-  <link href="css/style.css?v=7" rel="stylesheet" />
+  <link href="css/style.css?v=12" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body class="admin-page auth-page">
   <nav class="nav admin-nav">
     <div class="container nav-inner">
-      <a class="brand" href="admin-dashboard.html"><i class="fa-solid fa-user-shield"></i> Admin Portal</a>
+      <a class="brand" href="index.html"><img src="images/logo.png" alt="" class="brand-logo"> Admin Portal</a>
       <ul class="nav-links">
         <li><a href="admin-login.html" class="active">Login</a></li>
         <li><a href="admin-register.html">Register</a></li>
+        <li><a href="index.html" class="portal-link">Back to Home</a></li>
       </ul>
     </div>
   </nav>
@@ -35,17 +36,11 @@
         <form id="adminLoginForm">
           <div class="form-row">
             <label for="email">Email Address</label>
-            <div class="input-group">
-              <i class="fa-solid fa-envelope"></i>
-              <input id="email" name="email" type="email" placeholder="admin@example.com" required />
-            </div>
+            <input id="email" name="email" type="email" placeholder="admin@example.com" required />
           </div>
           <div class="form-row">
             <label for="password">Password</label>
-            <div class="input-group">
-              <i class="fa-solid fa-lock"></i>
-              <input id="password" name="password" type="password" placeholder="Enter your password" required />
-            </div>
+            <input id="password" name="password" type="password" placeholder="Enter your password" required />
           </div>
           <div class="form-actions">
             <button type="submit" class="btn primary">Sign In</button>

@@ -4,13 +4,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Vehicle Owner — Dashboard</title>
-  <link href="css/style.css?v=8" rel="stylesheet" />
+  <link href="css/style.css?v=12" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
   <nav class="nav">
     <div class="container nav-inner">
-      <a class="brand" href="#"><i class="fa-solid fa-truck-moving"></i> Vehicle Overloading System</a>
+      <a class="brand" href="#"><img src="images/logo.png" alt="" class="brand-logo"> Vehicle Overloading System</a>
       <ul class="nav-links">
         <li><a href="dashboard.html" class="active">Dashboard</a></li>
         <li><a href="login.html">Logout</a></li>
@@ -19,12 +19,10 @@
   </nav>
 
   <main class="container dashboard">
+    <img src="images/weighbridge-banner.jpg" alt="Vehicle weighing system" class="dashboard-banner">
     <header class="dashboard-header">
       <h1>Dashboard — <span id="ownerName">Owner</span></h1>
-      <div class="dashboard-actions">
-        <button id="paymentDetailBtn" class="btn secondary"><i class="fa-solid fa-receipt"></i> Payment Details</button>
-        <button id="logoutBtn" class="btn secondary">Logout</button>
-      </div>
+      <button id="logoutBtn" class="btn secondary">Logout</button>
     </header>
 
     <section class="cards">
@@ -50,32 +48,9 @@
       <p><strong>Fine Amount:</strong> ₹<span id="fineAmount">500</span></p>
       <button id="payFineBtn" class="btn primary">Proceed to Payment</button>
     </section>
-
-    <section id="paymentDetailPanel" class="card history-panel hidden">
-      <div class="detail-header">
-        <h3><i class="fa-solid fa-receipt"></i> Payment &amp; Violation History</h3>
-        <button id="closePaymentDetailBtn" class="btn secondary btn-sm">Close</button>
-      </div>
-      <div class="table-wrap">
-        <table class="admin-table">
-          <thead>
-            <tr>
-              <th>Strike</th>
-              <th>Violation Date</th>
-              <th>Payment Date</th>
-              <th>Amount</th>
-              <th>Status</th>
-            </tr>
-          </thead>
-          <tbody id="paymentHistoryBody">
-            <tr><td colspan="5" class="muted">Loading records...</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
   </main>
 
   <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-  <script src="js/dashboard.js?v=4"></script>
+  <script src="js/dashboard.js?v=6"></script>
 </body>
 </html>

@@ -38,12 +38,12 @@ function formatAmount(amount) {
 }
 
 function statusClass(status) {
-  if (!status) return '';
+  if (!status) return 'status-badge';
   const normalized = String(status).toLowerCase();
-  if (normalized === 'active' || normalized === 'success') return 'status-active';
-  if (normalized === 'blocked' || normalized === 'failed') return 'status-blocked';
-  if (normalized === 'pending') return 'status-pending';
-  return '';
+  if (normalized === 'active' || normalized === 'success') return 'status-badge status-active';
+  if (normalized === 'blocked' || normalized === 'failed') return 'status-badge status-blocked';
+  if (normalized === 'pending') return 'status-badge status-pending';
+  return 'status-badge';
 }
 
 function setActiveNav(page) {

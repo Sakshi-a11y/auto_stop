@@ -36,6 +36,11 @@ public class ViolationController {
     }
 
     private ResponseEntity<Map<String, Object>> increaseStrike(String vehicleNumber) {
+        if (vehicleNumber == null || vehicleNumber.isBlank()) {
+            return ResponseEntity.badRequest().body(Map.of("error", "Vehicle number is required"));
+        }
+
+        vehicleNumber = vehicleNumber.trim().toUpperCase();
         Optional<VehicleEntity> vehicleOpt = userService.findVehicleByNumber(vehicleNumber);
         if (vehicleOpt.isEmpty()) {
             return ResponseEntity.badRequest().body(Map.of("error", "Vehicle not found"));
@@ -46,6 +51,11 @@ public class ViolationController {
 
     @GetMapping("/details")
     public ResponseEntity<Map<String, Object>> getViolationDetails(@RequestParam String vehicleNumber) {
+        if (vehicleNumber == null || vehicleNumber.isBlank()) {
+            return ResponseEntity.badRequest().body(Map.of("error", "Vehicle number is required"));
+        }
+
+        vehicleNumber = vehicleNumber.trim().toUpperCase();
         Optional<VehicleEntity> vehicleOpt = userService.findVehicleByNumber(vehicleNumber);
         if (vehicleOpt.isEmpty()) {
             return ResponseEntity.badRequest().body(Map.of("error", "Vehicle not found"));

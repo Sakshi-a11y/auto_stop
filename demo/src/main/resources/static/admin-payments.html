@@ -4,17 +4,18 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Admin — Payment Details</title>
-  <link href="css/style.css?v=7" rel="stylesheet" />
+  <link href="css/style.css?v=13" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body class="admin-page">
   <nav class="nav admin-nav">
     <div class="container nav-inner">
-      <a class="brand" href="admin-dashboard.html"><i class="fa-solid fa-user-shield"></i> Admin Portal</a>
+      <a class="brand" href="admin-dashboard.html"><img src="images/logo.png" alt="" class="brand-logo"> Admin Portal</a>
       <ul class="nav-links">
         <li><a href="admin-dashboard.html" data-nav="dashboard">Dashboard</a></li>
         <li><a href="admin-vehicles.html" data-nav="vehicles">Vehicles</a></li>
         <li><a href="admin-payments.html" data-nav="payments" class="active">Payments</a></li>
+        <li><a href="index.html" class="portal-link">Home</a></li>
         <li><a href="admin-login.html" id="navLogout">Logout</a></li>
       </ul>
     </div>
@@ -26,7 +27,11 @@
       <a href="admin-dashboard.html" class="btn secondary">Back to Dashboard</a>
     </header>
 
-    <section class="card admin-section">
+    <section class="card admin-section table-section">
+      <div class="table-section-header">
+        <h3><i class="fa-solid fa-table"></i> Payment Records</h3>
+        <span id="paymentCount" class="muted">Loading...</span>
+      </div>
       <div class="table-wrap">
         <table class="admin-table">
           <thead>
@@ -42,7 +47,7 @@
             </tr>
           </thead>
           <tbody id="paymentsBody">
-            <tr><td colspan="8" class="muted">Loading payments...</td></tr>
+            <tr><td colspan="8" class="table-empty">Loading payments...</td></tr>
           </tbody>
         </table>
       </div>
@@ -50,6 +55,6 @@
   </main>
 
   <script src="js/admin-common.js"></script>
-  <script src="js/admin-payments.js"></script>
+  <script src="js/admin-payments.js?v=2"></script>
 </body>
 </html>

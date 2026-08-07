@@ -7,24 +7,23 @@
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
   <title>Vehicle Owner — Login</title>
-  <link href="css/style.css?v=7" rel="stylesheet" />
+  <link href="css/style.css?v=16" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body class="auth-page">
   <nav class="nav">
     <div class="container nav-inner">
-      <a class="brand" href="dashboard.html"><i class="fa-solid fa-truck-moving"></i> Vehicle Overloading System</a>
+      <a class="brand" href="index.html"><img src="images/logo.png" alt="" class="brand-logo"> Vehicle Overloading System</a>
       <ul class="nav-links">
         <li><a href="login.html" class="active">Login</a></li>
         <li><a href="register.html">Register</a></li>
-        <li><a href="admin-login.html" class="portal-link">Admin Portal</a></li>
+        <li><a href="index.html" class="portal-link">Back to Home</a></li>
       </ul>
     </div>
   </nav>
 
   <div class="auth-layout">
     <aside class="auth-brand-panel">
-      <span class="system-tag">Official Portal</span>
       <h1>Vehicle Overloading Management System</h1>
       <p>Secure access for registered vehicle owners to view violations, strike records, and payment status.</p>
       <ul>
@@ -44,17 +43,11 @@
         <form id="loginForm">
           <div class="form-row">
             <label for="vehicleNumber">Vehicle Number</label>
-            <div class="input-group">
-              <i class="fa-solid fa-car"></i>
-              <input id="vehicleNumber" name="vehicleNumber" type="text" placeholder="e.g. MH12AB1234" required />
-            </div>
+            <input id="vehicleNumber" name="vehicleNumber" type="text" placeholder="e.g. MH12AB1234" required />
           </div>
           <div class="form-row">
             <label for="password">Password</label>
-            <div class="input-group">
-              <i class="fa-solid fa-lock"></i>
-              <input id="password" name="password" type="password" placeholder="Enter your password" required />
-            </div>
+            <input id="password" name="password" type="password" placeholder="Enter your password" required />
           </div>
           <div class="form-actions">
             <button type="submit" class="btn primary">Sign In</button>

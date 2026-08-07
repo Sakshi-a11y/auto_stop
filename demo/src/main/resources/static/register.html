@@ -7,24 +7,23 @@
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
   <title>Vehicle Owner — Register</title>
-  <link href="css/style.css?v=7" rel="stylesheet" />
+  <link href="css/style.css?v=16" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body class="auth-page">
   <nav class="nav">
     <div class="container nav-inner">
-      <a class="brand" href="dashboard.html"><i class="fa-solid fa-truck-moving"></i> Vehicle Overloading System</a>
+      <a class="brand" href="index.html"><img src="images/logo.png" alt="" class="brand-logo"> Vehicle Overloading System</a>
       <ul class="nav-links">
         <li><a href="login.html">Login</a></li>
         <li><a href="register.html" class="active">Register</a></li>
-        <li><a href="admin-login.html" class="portal-link">Admin Portal</a></li>
+        <li><a href="index.html" class="portal-link">Back to Home</a></li>
       </ul>
     </div>
   </nav>
 
   <div class="auth-layout">
     <aside class="auth-brand-panel">
-      <span class="system-tag">Official Portal</span>
       <h1>Vehicle Owner Registration</h1>
       <p>Register your vehicle to access the overloading management portal and stay compliant with transport regulations.</p>
       <ul>
@@ -35,63 +34,57 @@
     </aside>
 
     <section class="auth-form-panel">
-      <div class="card auth-card wide">
+      <div class="card auth-card compact">
         <div class="auth-header">
           <h2>Create Account</h2>
-          <p class="muted">Fill in your details to register as a vehicle owner</p>
+          <p class="muted">Register as a vehicle owner</p>
         </div>
 
         <form id="registerForm">
-          <div class="form-row">
-            <label for="fullName">Full Name</label>
-            <div class="input-group">
-              <i class="fa-solid fa-user"></i>
-              <input id="fullName" name="fullName" type="text" placeholder="Full name as per records" required />
+          <div class="register-grid">
+            <div class="form-row">
+              <label for="fullName">Full Name</label>
+              <input id="fullName" name="fullName" type="text" placeholder="Full name" required />
             </div>
-          </div>
 
-          <div class="form-row">
-            <label for="contact">Contact Number</label>
-            <div class="input-group">
-              <i class="fa-solid fa-phone"></i>
-              <input id="contact" name="contact" type="tel" placeholder="10-digit mobile number" required />
+            <div class="form-row">
+              <label for="contact">Contact</label>
+              <input id="contact" name="contact" type="tel" placeholder="Mobile number" required />
             </div>
           </div>
 
           <div class="form-row">
             <label for="address">Address</label>
-            <textarea id="address" name="address" rows="2" placeholder="Residential or business address" required></textarea>
+            <textarea id="address" name="address" rows="2" placeholder="Your address" required></textarea>
           </div>
 
-          <div class="form-row">
-            <label for="vehicleType">Vehicle Type</label>
-            <div class="input-group">
-              <i class="fa-solid fa-truck"></i>
-              <input id="vehicleType" name="vehicleType" type="text" placeholder="Truck, Car, Bus, etc." required />
+          <div class="register-grid">
+            <div class="form-row">
+              <label for="vehicleType">Vehicle Type</label>
+              <input id="vehicleType" name="vehicleType" type="text" placeholder="Car, Truck..." required />
+            </div>
+
+            <div class="form-row">
+              <label for="vehicleNumber">Vehicle No</label>
+              <input id="vehicleNumber" name="vehicleNumber" type="text" placeholder="UP32AB1234" required />
             </div>
           </div>
 
-          <div class="form-row">
-            <label for="vehicleNumber">Vehicle Number</label>
-            <div class="input-group">
-              <i class="fa-solid fa-id-card"></i>
-              <input id="vehicleNumber" name="vehicleNumber" type="text" placeholder="e.g. UP32AB1234" required />
+          <div class="register-grid">
+            <div class="form-row">
+              <label for="password">Password</label>
+              <div class="input-group">
+                <i class="fa-solid fa-lock"></i>
+                <input id="password" name="password" type="password" placeholder="Min. 6 chars" required />
+              </div>
             </div>
-          </div>
 
-          <div class="form-row">
-            <label for="password">Password</label>
-            <div class="input-group">
-              <i class="fa-solid fa-lock"></i>
-              <input id="password" name="password" type="password" placeholder="Minimum 6 characters" required />
-            </div>
-          </div>
-
-          <div class="form-row">
-            <label for="confirmPassword">Confirm Password</label>
-            <div class="input-group">
-              <i class="fa-solid fa-shield-halved"></i>
-              <input id="confirmPassword" name="confirmPassword" type="password" placeholder="Re-enter password" required />
+            <div class="form-row">
+              <label for="confirmPassword">Confirm</label>
+              <div class="input-group">
+                <i class="fa-solid fa-shield-halved"></i>
+                <input id="confirmPassword" name="confirmPassword" type="password" placeholder="Re-enter" required />
+              </div>
             </div>
           </div>
 
@@ -102,11 +95,6 @@
 
         <div class="auth-footer muted">
           Already registered? <a href="login.html">Sign in</a>
-        </div>
-
-        <div class="portal-switch">
-          <p class="muted">Administrator access</p>
-          <a href="admin-register.html" class="btn secondary portal-btn">Admin Registration</a>
         </div>
       </div>
     </section>
