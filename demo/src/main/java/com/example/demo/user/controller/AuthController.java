@@ -29,7 +29,7 @@ public class AuthController {
 
     @GetMapping("/")
     public String home() {
-        return "redirect:/login.html";
+        return "forward:/index.html";
     }
 
     @GetMapping("/login")
