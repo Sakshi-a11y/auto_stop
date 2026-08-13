@@ -72,7 +72,7 @@ Vehicle Status & Monitoring
 Clone the repository:
 
 ```bash
-git clone <YOUR_REPOSITORY_URL>
+git clone <https://github.com/Sakshi-a11y/auto_stop.git>
 ```
 
 Configure the required environment variables and database settings before running the application.
